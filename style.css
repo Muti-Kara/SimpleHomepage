@@ -1,0 +1,147 @@
+:root {
+	--background: #1e1e2e;
+	--block-background: #302d41;
+	--titles: #ddb6f2;
+	--links: #f5c2e7;
+	--arrows: #89dceb;
+	--numbers: #abe9b3;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: var(--background);
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
+}
+
+.bookmark {
+	text-align: center;
+	width: 85%;
+	height: 25vh;
+	display: flex;
+	flex-direction:row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.clock {
+	width: 24vh;
+	height: 24vh;
+	border-radius: 50%;
+	background-color: var(--block-background);
+	position: relative;
+}
+
+.numbers {
+	width: inherit;
+	height: inherit;
+	position: relative;
+	color: var(--numbers);
+}
+
+.numbers div{
+	position: absolute;
+	font-size: 2vh;
+}
+
+#twelve {
+	top: 0.75vh;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#three {
+	right: 0.75vh;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#six {
+	bottom: 0.75vh;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#nine {
+	left: 0.75vh;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.arrows {
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.arrows::before {
+	content: "";
+	width: 1.5vh;
+	height: 1.5vh;
+	background-color: var(--arrows);
+	border-radius: 50%;
+}
+
+.arrows div{
+	background-color: var(--arrows);
+	position: absolute;
+	bottom: 50%;
+	border-radius: 100% 100% 0 0;
+	transform-origin: bottom center;
+}
+
+#hour {
+	height: 5.5vh;
+	width: 0.8vh;
+}
+
+#minute {
+	width: 0.6vh;
+	height: 7vh;
+}
+
+#second {
+	height: 8.5vh;
+	width: 0.5vh;
+}
+
+.block {
+	width: 250px;
+	height: 25vh;
+	border-radius: 35px;
+	background-color: var(--block-background);
+}
+
+.seperator {
+	width: 20%;
+}
+
+.bTitle {
+	color: var(--titles);
+	padding: 2vh;
+	height: 5vh;
+	font-size: 3.3vh;
+}
+
+.bContent {
+	color: var(--links);
+	height: 4vh;
+	font-size: 2vh;
+	text-decoration: none;
+}

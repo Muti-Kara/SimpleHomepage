@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Muti Kara">
+<meta name="description" content="Personal homepage for web browser">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="bookmarks.js"></script>
+<script type="text/javascript" src="script.js"></script>
+<title>Homepage</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="bookmark">
+			<div class="block"></div>
+			<div class="seperator"></div>
+			<div class="block"></div>
+		</div>
+		
+		<div class="clock">
+			<div class="numbers">
+				<div id="twelve">12</div>
+				<div id="three">3</div>
+				<div id="six">6</div>
+				<div id="nine">9</div>
+			</div>
+			<div class="arrows">
+				<div id="hour"></div>
+				<div id="minute"></div>
+				<div id="second"></div>
+			</div>
+		</div>
+		
+		<div class="bookmark">
+			<div class="block"></div>
+			<div class="seperator"></div>
+			<div class="block"></div>
+		</div>
+	</div>
+	<script>
+		function setupBookmarks() {
+			var blocks = document.getElementsByClassName("block");
+			
+			for (var i = 0; i < blocks.length; i++){
+				var blockHTML = ['<div class="bTitle">' + bookmarks[i].title + '</div>'];
+				for (var j = 0; j < bookmarks[i].links.length; j++){
+					blockHTML.push('<div class="bContent"><a class="bContent" href="'
+								+ bookmarks[i].links[j].url + '">'
+								+ bookmarks[i].links[j].name + '</a></div>');
+				}
+				blocks[i].innerHTML = blockHTML.join('');
+			}
+		}
+
+		setupBookmarks();
+	</script>
+</body>
+
+</html>
